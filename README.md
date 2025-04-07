@@ -6,8 +6,8 @@
   	- [Arduino Installation](#arduino-installation)
   - [Arduino Code](#arduino-code)
   	- [prerequisite](#prerequisite)
- 		- [Download Arduino code](#download-arduino-code )
- 		- [Download Arduino Libraries](#download-arduino-libraries )
+ 		- [Download Arduino code](#download-arduino-code)
+ 		- [Download Arduino Libraries](#download-arduino-libraries)
  	 		- [Add Libraries to Arduino](#add-libraries-to-arduino)
  	 - [Arduino code for bluetooth control](#arduino-code-for-bluetooth-control)
 * [Bluetoothctl](#bluetoothctl)
@@ -51,24 +51,24 @@ Detailed instructions for installation :
 Download my arduino code 
 [here](../../tree/main/Smart_home)
 
-> the arduino code is complete but in this example we will just see the bluetooth part
+> The arduino code is complete, but in this example, we will just see the Bluetooth part.
 
 #### Download Arduino Libraries 
 
-Download liquidcrystal-i2c libraries directly on the arduino website :</br>
+Download liquidcrystal-i2c libraries directly from the Arduino website:</br>
 [here](https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/)</br>
-or directly on my github :</br>
+or directly from my GitHub :</br>
 [here](../../blob/main/Smart_home/libraries/LiquidCrystal_I2C-1.1.2.zip)
 
 ##### Add Libraries to Arduino
 
-To install a new library into your Arduino.</br>
-Open the Arduino and click to the "Sketch" menu and then Include Library > ADD Libraries zip.</br>
-Then select the library in your files</br>
+To install a new library into your Arduino:</br>
+Open the Arduino IDE and click on the "Sketch" menu, then Include Library > Add Libraries (.zip).</br>
+Then select the library from your files.</br>
 
 ## Arduino code for bluetooth control
 
-```console
+```cpp
 void loop() {
 	if (Serial.available() > 0) {
     		val = Serial.read(); //the value that the remote sends to us
@@ -89,7 +89,6 @@ void loop() {
  	}
 }
 ```
-
 
 # Bluetoothctl
 
@@ -174,7 +173,7 @@ show the different services and characteristics :
 [HMsoft]#list-attributes 64:33:DB:92:B6:80
 ```
 
-Enable the right properties for  to acquire notification and writing :
+Enable the right properties for to acquire notification and writing :
 
 ```bash
 [HMsoft]#select-atribute /org/bluez/hci0/dev_64_33_DB_92_B6_80/service0010/char0011
@@ -202,40 +201,36 @@ You can disable the notify with the following command :
 > 0x72 corresponds to character "r" </br>
 > 0x73 0xda corresponds to character "s"
 
-
-
 | character        | hexadecimal      | function |
-| ------|-----|-----|
-| a  	| 0x61	| sends a high value to a digital output pin 13	|
-| b 	| 0x62	| sends a low value to a digital output pin 13	|
-| c 	| 0x63	| sends a high value to a digital output pin 12	|
-| d 	| 0x64	| sends a low value to a digital output pin 12	|
-| e 	| 0x65	| launch music 1	|
-| f 	| 0x66	| launch music 2	|
-| g 	| 0x67	| stop music	|
-| h 	| 0x69	| return brightness value	|
-| i 	| 0x69	| return gas value	|
-| j 	| 0x6A	| return soil moisture value	|
-| k 	| 0x6B	| return water value	|
-| l 	| 0x6C	| open door	|
-| m 	| 0x6D	| closed door	|
-| n 	| 0x6E	| closed window	|
-| o 	| 0x6F	| Open window	|
-| p 	| 0x70	| interior yellow led on	|
-| q 	| 0x71	| interior yellow led off	|
-| r 	| 0x72	| fan on	|
-| s 	| 0x73 0x0A	| fan off	|
-| . 	| 0x2E	| Send "_" to password for door	|
-| _ 	| 0x5F	| Send "." to password for door	|
-| v 	| 0x76	| validate the door code	|
+| ---------------- | ---------------- | -------- |
+| a                | 0x61             | sends a high value to digital pin 13 |
+| b                | 0x62             | sends a low value to digital pin 13 |
+| c                | 0x63             | sends a high value to digital pin 12 |
+| d                | 0x64             | sends a low value to digital pin 12 |
+| e                | 0x65             | launch music 1 |
+| f                | 0x66             | launch music 2 |
+| g                | 0x67             | stop music |
+| h                | 0x69             | return brightness value |
+| i                | 0x69             | return gas value |
+| j                | 0x6A             | return soil moisture value |
+| k                | 0x6B             | return water value |
+| l                | 0x6C             | open door |
+| m                | 0x6D             | closed door |
+| n                | 0x6E             | closed window |
+| o                | 0x6F             | open window |
+| p                | 0x70             | interior yellow LED on |
+| q                | 0x71             | interior yellow LED off |
+| r                | 0x72             | fan on |
+| s                | 0x73 0x0A        | fan off |
+| .                | 0x2E             | Send "_" to password for door |
+| _                | 0x5F             | Send "." to password for door |
+| v                | 0x76             | validate the door code |
 
-	
 <br></br>
-
-
 
 [Linux]: https://www.arduino.cc/en/Guide/Linux
 [macOS]: https://www.arduino.cc/en/Guide/macOS
 [Windows]: https://www.arduino.cc/en/Guide/Windows
 [arduino]: https://www.arduino.cc/en/Main/Software
 [gatt_menu]: https://www.bluetooth.com/specifications/specs/gatt-specification-supplement-6/
+```
