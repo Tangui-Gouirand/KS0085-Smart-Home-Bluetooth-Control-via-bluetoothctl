@@ -200,30 +200,30 @@ You can disable the notify with the following command :
 > 0x72 corresponds to character "r" </br>
 > 0x73 0xda corresponds to character "s"
 
-| character        | hexadecimal      | function |
-| ---------------- | ---------------- | -------- |
-| a                | 0x61             | sends a high value to digital pin 13 |
-| b                | 0x62             | sends a low value to digital pin 13 |
-| c                | 0x63             | sends a high value to digital pin 12 |
-| d                | 0x64             | sends a low value to digital pin 12 |
-| e                | 0x65             | launch music 1 |
-| f                | 0x66             | launch music 2 |
-| g                | 0x67             | stop music |
-| h                | 0x69             | return brightness value |
-| i                | 0x69             | return gas value |
-| j                | 0x6A             | return soil moisture value |
-| k                | 0x6B             | return water value |
-| l                | 0x6C             | open door |
-| m                | 0x6D             | closed door |
-| n                | 0x6E             | closed window |
-| o                | 0x6F             | open window |
-| p                | 0x70             | interior yellow LED on |
-| q                | 0x71             | interior yellow LED off |
-| r                | 0x72             | fan on |
-| s                | 0x73 0x0A        | fan off |
-| .                | 0x2E             | Send "_" to password for door |
-| _                | 0x5F             | Send "." to password for door |
-| v                | 0x76             | validate the door code |
+| Character | Hexadecimal | Function                                        |
+|-----------|-------------|-------------------------------------------------|
+| a         | 0x61        | Sends a high value to digital pin 13           |
+| b         | 0x62        | Sends a low value to digital pin 13            |
+| c         | 0x63        | Sends a high value to digital pin 12           |
+| d         | 0x64        | Sends a low value to digital pin 12            |
+| e         | 0x65        | Launches music 1                                |
+| f         | 0x66        | Launches music 2                                |
+| g         | 0x67        | Stops music                                   |
+| h         | 0x68        | Returns brightness value                         |
+| i         | 0x69        | Returns gas value                               |
+| j         | 0x6A        | Returns soil moisture value                     |
+| k         | 0x6B        | Returns water value                             |
+| l         | 0x6C        | Opens door                                     |
+| m         | 0x6D        | Closes door                                    |
+| n         | 0x6E        | Closes window                                  |
+| o         | 0x6F        | Opens window                                   |
+| p         | 0x70        | Interior yellow LED on                           |
+| q         | 0x71        | Interior yellow LED off                          |
+| r         | 0x72        | Fan on                                        |
+| s         | 0x73 0x0A   | Fan off (with newline)                          |
+| .         | 0x2E        | Sends "_" to door password                     |
+| _         | 0x5F        | Sends "." to door password                     |
+| v         | 0x76        | Validates door code                            |
 
 <br></br>
 
